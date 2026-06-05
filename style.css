@@ -261,7 +261,7 @@ hr {
     border-color: #6ab04c;
 }
 
-#services, #projects, #experience, #contact, #archive, #certifications {
+#services, #projects, #experience, #contact, #archive, #certifications, #skills, #professional-work {
     padding: 100px 70px;
     width: 100%;
     text-align: center;
@@ -458,7 +458,7 @@ footer {
     nav {
         padding: 0 30px;
     }
-    .container, #bio, #services, #projects, #experience, #contact, #archive, #certifications {
+    .container, #bio, #services, #projects, #experience, #contact, #archive, #certifications, #skills, #professional-work {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -591,6 +591,21 @@ footer {
     }
     .experience-item {
         padding: 1.5rem;
+    }
+
+    /* Tighten heavy vertical spacing on phones */
+    #services, #projects, #experience, #contact, #archive, #certifications, #skills, #professional-work, #bio {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .intro h1 {
+        margin-bottom: 35px;
+    }
+    .left h3 {
+        font-size: 2.2em;
+    }
+    .skill-tags span {
+        font-size: 0.8em;
     }
 }
 
@@ -734,4 +749,66 @@ footer {
 #services .cardbody p {
     text-align: left;
     word-break: normal;
+}
+
+/* Technical Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skill-group {
+    background: #2a2a2a;
+    padding: 1.8rem;
+    border-radius: 10px;
+    border-left: 5px solid #6ab04c;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(106, 176, 76, 0.2);
+}
+
+.skill-group h3 {
+    color: #6ab04c;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-tags span {
+    background: #1a1a1a;
+    color: #eee;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85em;
+    border: 1px solid #444;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-tags span:hover {
+    border-color: #6ab04c;
+    color: #6ab04c;
+}
+
+/* Scroll-reveal animation (only applied when JS adds .reveal; respects reduced motion) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: none;
 }
